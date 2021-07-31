@@ -1,4 +1,4 @@
-﻿@model VariablesModel
+﻿@model CalculateEverything.Models.VariablesModel
 @{
     ViewData["Title"] = "SquareArea";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -6,17 +6,15 @@
 
 <h1>Pole Kwadratu</h1>
 <form asp-controller="AreaCalculator" asp-action="SquareArea" method="post">
-    <div class="form-group">
+    <div >
         <label class="col-form-label mt-4" asp-for="SquareSide">Podaj bok kwadratu</label>
         <input type="number" class="form-control" asp-for="SquareSide" placeholder="Bok kwadratu" id="inputSide">
     </div>
     <div>
-        <button type="button" class="btn btn-success" asp-action="SquareArea">Oblicz</button>
+        <button type="button" class="btn btn-success" asp-action="SquareArea" formmethod="post">Oblicz</button>
     </div>
-    <div class="form-group">
-        <fieldset>
+    <div >
             <label class="form-label mt-4" asp-for="Result">Pole kwadratu wynosi:</label>
-            <input class="form-control" id="readOnlyInput" asp-for="Result" placeholder="Wynik" readonly="">
-        </fieldset>
+            <input class="form-control" id="readOnlyInput" asp-for="Result" placeholder="Wynik" readonly="">      
     </div>
 </form>
