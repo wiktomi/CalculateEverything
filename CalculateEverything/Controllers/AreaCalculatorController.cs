@@ -24,7 +24,20 @@ namespace CalculateEverything.Controllers
         public IActionResult SquareArea(VariablesModel model)
         {
             model.Result = Math.Pow(model.SquareSide, 2);
-            return View(model);
+            ViewBag.Result = model.Result;
+            return View();
+        }
+        [HttpGet]
+        public IActionResult RectangleArea()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult RectangleArea(VariablesModel model)
+        {
+            model.Result = model.FristRectangleSide * model.SecondRectangleSide;
+            ViewBag.Result = model.Result;
+            return View();
         }
     }
 }
