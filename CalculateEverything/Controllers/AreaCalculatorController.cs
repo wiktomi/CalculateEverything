@@ -39,5 +39,17 @@ namespace CalculateEverything.Controllers
             ViewBag.Result = model.Result;
             return View();
         }
+        [HttpGet]
+        public IActionResult TriangleArea()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult TriangleArea(VariablesModel model)
+        {
+            model.Result = (model.TriangleBaseLine * model.TriangleHeight) / 2;
+            ViewBag.Result = model.Result;
+            return View();
+        }
     }
 }

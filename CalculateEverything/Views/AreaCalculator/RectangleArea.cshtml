@@ -6,19 +6,21 @@
 
 
 
-<h1>Pole Prostokąta</h1>
+<h3>Pole Prostokąta</h3>
 <form asp-controller="AreaCalculator" asp-action="RectangleArea" method="post">
-    <div class="card-border-secondary mb-3">
-        <label class="col-form-label mt-4" asp-for="FristRectangleSide">Podaj pierwszy bok prostokąta</label>
-        <input type="number" class="form-control" asp-for="FristRectangleSide" placeholder="Pierwszy bok prostokąta" id="inputSide">
-        <label class="col-form-label mt-4" asp-for="SecondRectangleSide">Podaj drugi bok prostokąta</label>
-        <input type="number" class="form-control" asp-for="SecondRectangleSide" placeholder="Drugi bok prostokąta" id="inputSide">
-    </div>
-    <div mb-3>
-        <button name="button" class="btn btn-success" asp-controller="AreaCalculator" asp-action="RectangleArea" formmethod="post">Oblicz</button>
-    </div>
-    <div>
-        <label class="form-label mt-4" asp-for="Result">Pole prostokąta wynosi:</label>
-        <input class="form-control" id="readOnlyInput" type="text" value="@ViewBag.Result" placeholder="Wynik" readonly="">
+    <div class="mb-3" style="max-width: 40rem;">
+        <div>
+            <label class="col-form-label mt-4" asp-for="FristRectangleSide">Podaj pierwszy bok prostokąta:</label>
+            <input type="number" class="form-control" asp-for="FristRectangleSide" placeholder="Pierwszy bok prostokąta" id="inputSide">
+            <label class="col-form-label mt-4" asp-for="SecondRectangleSide">Podaj drugi bok prostokąta:</label>
+            <input type="number" class="form-control" asp-for="SecondRectangleSide" placeholder="Drugi bok prostokąta" id="inputSide">
+        </div>
+        <div class="d-grid gap-2" style="padding-top: 30px">
+            <button name="button" class="btn btn-lg btn-success" asp-controller="AreaCalculator" asp-action="RectangleArea" formmethod="post">Oblicz</button>
+        </div>
+        <div>
+            <label class="form-label mt-4" asp-for="Result">Pole prostokąta wynosi:</label>
+            <input class="form-control" id="readOnlyInput" type="text" value="@ViewBag.Result" placeholder="Wynik" readonly="">
+        </div>
     </div>
 </form>
