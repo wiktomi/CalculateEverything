@@ -4,22 +4,49 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h3>Pole trójkąta</h3>
-<form asp-controller="AreaCalculator" asp-action="TriangleArea" method="post">
-    <div class="mb-3" style="max-width: 40rem;">
-        <div>
-            <label class="col-form-label mt-4" asp-for="TriangleBaseLine">Podaj podstawę trójkąta:</label>
-            <input type="number" class="form-control" asp-for="TriangleBaseLine" placeholder="Podstawa trójkąta" id="inputTriangleBaseLine">
-            <label class="col-form-label mt-4" asp-for="TriangleHeight">Podaj wysokość trójkąta:</label>
-            <input type="number" class="form-control" asp-for="TriangleHeight" placeholder="Wysokość trójkąta" id="inputTriangleHeight">
-        </div>
-        <div class="d-grid gap-2" style="padding-top: 30px">
-            <button name="button" class="btn btn-lg btn-success" asp-controller="AreaCalculator" asp-action="TriangleArea" formmethod="post">Oblicz</button>
-        </div>
-        <div>
-            <label class="form-label mt-4" asp-for="Result">Pole trójkąta wynosi:</label>
-            <input class="form-control" id="readOnlyInput" type="text" value="@ViewBag.Result" placeholder="Wynik" readonly="">
-        </div>
+<div class="row">
+    <div class="col-md-4">
+        <h3>Pole trójkąta</h3>
+        <form asp-controller="AreaCalculator" asp-action="TriangleArea" method="post">
+            <div class="mb-3" style="max-width: 40rem;">
+                <div>
+                    <label class="col-form-label mt-4" asp-for="TriangleBaseLine">Podaj podstawę trójkąta:</label>
+                    <input type="number" class="form-control" asp-for="TriangleBaseLine" placeholder="Podstawa trójkąta" id="inputTriangleBaseLine">
+                    <label class="col-form-label mt-4" asp-for="TriangleHeight">Podaj wysokość trójkąta:</label>
+                    <input type="number" class="form-control" asp-for="TriangleHeight" placeholder="Wysokość trójkąta" id="inputTriangleHeight">
+                </div>
+                <div class="d-grid gap-2" style="padding-top: 30px">
+                    <button name="button" class="btn btn-lg btn-success" asp-controller="AreaCalculator" asp-action="TriangleArea" formmethod="post">Oblicz</button>
+                </div>
+                <div>
+                    <label class="form-label mt-4" asp-for="Result">Pole trójkąta wynosi:</label>
+                    <input class="form-control" id="readOnlyInput" type="text" value="@ViewBag.Result" placeholder="Wynik" readonly="">
+                </div>
+            </div>
+        </form>
     </div>
-</form>
+    <div class="col-md-4">
+    <h3>Pole trójkąta</h3>
+    <form asp-controller="AreaCalculator" asp-action="TriangleArea" method="post">
+        <div class="mb-3" style="max-width: 40rem;">
+            <div>
+                <label class="col-form-label mt-4" asp-for="TriangleBaseLine">Podaj podstawę trójkąta:</label>
+                <input type="number" class="form-control" asp-for="TriangleBaseLine" placeholder="Podstawa trójkąta" id="inputTriangleBaseLine">
+                <label class="col-form-label mt-4" asp-for="TriangleHeight">Podaj wysokość trójkąta:</label>
+                <input type="number" class="form-control" asp-for="TriangleHeight" placeholder="Wysokość trójkąta" id="inputTriangleHeight">
+            </div>
+            <div class="d-grid gap-2" style="padding-top: 30px">
+                <button name="button" class="btn btn-lg btn-success" asp-controller="AreaCalculator" asp-action="TriangleArea" formmethod="post">Oblicz</button>
+            </div>
+            <div>
+                <label class="form-label mt-4" asp-for="Result">Pole trójkąta wynosi:</label>
+                <input class="form-control" id="readOnlyInput" type="text" value="@ViewBag.Result" placeholder="Wynik" readonly="">
+            </div>
+        </div>
+    </form>
+    </div>
+</div>
+
+
+
 
