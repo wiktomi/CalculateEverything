@@ -3,22 +3,86 @@
     ViewData["Title"] = "SquareArea";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
-<h3>Pole Kwadratu</h3>
-<form asp-controller="AreaCalculator" asp-action="SquareArea" method="post">
-    <div class="mb-3" style="max-width: 40rem;">
-        <div>
-            <label class="col-form-label mt-4" asp-for="SquareSide">Podaj bok kwadratu:</label>
-            <input type="number" class="form-control" asp-for="SquareSide" placeholder="Bok kwadratu" id="inputSide">
+<div class="row">
+    <div class="col-lg-3">
+        <div >
+            <h5>Pole Kwadratu</h5>
+            </div>
+                <form asp-controller="AreaCalculator" asp-action="SquareArea" method="post">
+                    <div class="mb-3" style="max-width: 40rem;">
+                        <div>
+                            <label class="col-form-label mt-4" asp-for="SquareSide">Podaj bok kwadratu:</label>
+                            <input type="number" class="form-control" asp-for="SquareSide" placeholder="Bok kwadratu" id="inputSide">
+                        </div>
+                        <div class="d-grid gap-2" style="padding-top: 30px">
+                            <button name="button" value="buttonFirst" class="btn btn-lg btn-success" asp-controller="AreaCalculator" asp-action="SquareArea" formmethod="post">Oblicz</button>
+                        </div>
+                        <div>
+                            <label class="form-label mt-4" asp-for="Result">Pole kwadratu wynosi:</label>
+                            <input class="form-control" id="readOnlyInput" type="text" value="@ViewBag.ResultArea" placeholder="Wynik" readonly="">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-lg-3">
+                <div>
+                    <h5>Pole kwadratu(przekątna)</h5>
+                </div>
+                <form asp-controller="AreaCalculator" asp-action="SquareArea" method="post">
+                    <div class="mb-3" style="max-width: 40rem;">
+                        <div>
+                            <label class="col-form-label mt-4" asp-for="SquareDiagonal">Podaj przekątną kwadratu:</label>
+                            <input type="number" class="form-control" asp-for="SquareDiagonal" placeholder="Przekątna kwadratu" id="inputDiagonal">
+                        </div>
+                        <div class="d-grid gap-2" style="padding-top: 30px">
+                            <button name="button" value="buttonSecond" class="btn btn-lg btn-success" asp-controller="AreaCalculator" asp-action="SquareArea" formmethod="post">Oblicz</button>
+                        </div>
+                        <div>
+                            <label class="form-label mt-4" asp-for="Result">Pole kwadratu wynosi:</label>
+                            <input class="form-control" id="readOnlyInput" type="text" value="@ViewBag.ResultArea2" placeholder="Wynik" readonly="">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-lg-3">           
+                <div>
+                    <h5>Długość przekątnej</h5>
+                </div>
+                <form asp-controller="AreaCalculator" asp-action="SquareArea" method="post">
+                    <div class="mb-3" style="max-width: 40rem;">
+                        <div>
+                            <label class="col-form-label mt-4" asp-for="SquareSide">Podaj bok kwadratu:</label>
+                            <input type="number" class="form-control" asp-for="SquareSide" placeholder="Bok kwadratu" id="inputSide">
+                        </div>
+                        <div class="d-grid gap-2" style="padding-top: 30px">
+                            <button name="button" value="buttonThird" class="btn btn-lg btn-success" asp-controller="AreaCalculator" asp-action="SquareArea" formmethod="post">Oblicz</button>
+                        </div>
+                        <div>
+                            <label class="form-label mt-4" asp-for="Result">Długość przekątnej wynosi:</label>
+                            <input class="form-control" id="readOnlyInput" type="text" value="@ViewBag.ResultDiagonal" placeholder="Wynik" readonly="">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-lg-3">
+                <div>
+                    <h5>Obwód kwadratu</h5>
+                </div>
+                <form asp-controller="AreaCalculator" asp-action="SquareArea" method="post">
+                    <div class="mb-3" style="max-width: 40rem;">
+                        <div>
+                            <label class="col-form-label mt-4" asp-for="SquareSide">Podaj bok kwadratu:</label>
+                            <input type="number" class="form-control" asp-for="SquareSide" placeholder="Bok kwadratu" id="inputSide">
+                        </div>
+                        <div class="d-grid gap-2" style="padding-top: 30px">
+                            <button name="button" value="buttonFourth" class="btn btn-lg btn-success" asp-controller="AreaCalculator" asp-action="SquareArea" formmethod="post">Oblicz</button>
+                        </div>
+                        <div>
+                            <label class="form-label mt-4" asp-for="Result">Obwód kwadratu wynosi:</label>
+                            <input class="form-control" id="readOnlyInput" type="text" value="@ViewBag.ResultCircuit" placeholder="Wynik" readonly="">
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
-        <div class="d-grid gap-2" style="padding-top: 30px">
-            <button name="button" class="btn btn-lg btn-success" asp-controller="AreaCalculator" asp-action="SquareArea" formmethod="post">Oblicz</button>
-        </div>
-        <div>
-            <label class="form-label mt-4" asp-for="Result">Pole kwadratu wynosi:</label>
-            <input class="form-control" id="readOnlyInput" type="text" value="@ViewBag.Result" placeholder="Wynik" readonly="">
-        </div>
-    </div>
-</form>
-
 

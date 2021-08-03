@@ -18,12 +18,34 @@ namespace CalculateEverything.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult SquareArea(VariablesModel model)
+        public IActionResult SquareArea(VariablesModel model, string button)
         {
-            model.Result = Math.Pow(model.SquareSide, 2);
-            ViewBag.Result = model.Result;
-            return View();
+
+            if (button == "buttonFirst")
+            {
+                model.Result = Math.Pow(model.SquareSide, 2);
+                ViewBag.ResultArea = model.Result;
+            }
+            if (button == "buttonSecond")
+            {
+                model.Result = (Math.Pow(model.SquareDiagonal, 2)) / 2;
+                ViewBag.ResultArea2 = model.Result;
+            }
+            if (button == "buttonThird")
+            {
+                model.Result = Math.Round(model.SquareSide * Math.Sqrt(2), 2);
+                ViewBag.ResultDiagonal = model.Result.ToString();
+            }
+            if(button == "buttonFourth")
+            {
+                model.Result = model.SquareSide * 4;
+                ViewBag.ResultCircuit = model.Result;
+            }
+             
+                return View();
         }
+       
+
         [HttpGet]
         public IActionResult RectangleArea()
         {

@@ -6,6 +6,8 @@ namespace CalculateEverything.Models
     {
         [Display(Name = "Bok kwadratu")]
         public double SquareSide { get; set; }
+        [Display(Name ="Przekątna kwadratu")]
+        public double SquareDiagonal { get; set; }
 
         [Display(Name = "Pierwszy bok prostokąta")]
         public double FristRectangleSide { get; set; }
