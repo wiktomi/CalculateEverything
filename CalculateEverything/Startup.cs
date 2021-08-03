@@ -20,6 +20,13 @@ namespace CalculateEverything
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddMvc();
+            services.AddRazorPages()
+                .AddMvcOptions(options =>
+                {
+                    options.MaxModelValidationErrors = 50;
+                    options.ModelBindingMessageProvider.SetValueMustNotBeNullAccessor(_ => "To pole jest wymagane");
+                });
             services.AddScoped<VariablesModel>();
         }
 

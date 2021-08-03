@@ -5,8 +5,10 @@ namespace CalculateEverything.Models
     public class VariablesModel
     {
         [Display(Name = "Bok kwadratu")]
+        [Required(ErrorMessage = "Pole Wymagane")]
         public double SquareSide { get; set; }
         [Display(Name ="Przekątna kwadratu")]
+        [Required]
         public double SquareDiagonal { get; set; }
 
         [Display(Name = "Pierwszy bok prostokąta")]

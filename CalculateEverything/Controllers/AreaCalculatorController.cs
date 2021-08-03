@@ -20,28 +20,31 @@ namespace CalculateEverything.Controllers
         [HttpPost]
         public IActionResult SquareArea(VariablesModel model, string button)
         {
-
-            if (button == "buttonFirst")
-            {
-                model.Result = Math.Pow(model.SquareSide, 2);
-                ViewBag.ResultArea = model.Result;
+            if (!ModelState.IsValid)
+            { 
+                return View(); 
             }
-            if (button == "buttonSecond")
-            {
-                model.Result = (Math.Pow(model.SquareDiagonal, 2)) / 2;
-                ViewBag.ResultArea2 = model.Result;
-            }
-            if (button == "buttonThird")
-            {
-                model.Result = Math.Round(model.SquareSide * Math.Sqrt(2), 2);
-                ViewBag.ResultDiagonal = model.Result.ToString();
-            }
-            if(button == "buttonFourth")
-            {
-                model.Result = model.SquareSide * 4;
-                ViewBag.ResultCircuit = model.Result;
-            }
-             
+                if (button == "buttonFirst")
+                {
+                    model.Result = Math.Pow(model.SquareSide, 2);
+                    ViewBag.ResultArea = model.Result;
+                }
+                if (button == "buttonSecond")
+                {
+                    model.Result = Math.Round((Math.Pow(model.SquareDiagonal, 2)) / 2, 2);
+                    ViewBag.ResultArea2 = model.Result;
+                }
+                if (button == "buttonThird")
+                {
+                    model.Result = Math.Round(model.SquareSide * Math.Sqrt(2), 2);
+                    ViewBag.ResultDiagonal = model.Result.ToString();
+                }
+                if (button == "buttonFourth")
+                {
+                    model.Result = model.SquareSide * 4;
+                    ViewBag.ResultCircuit = model.Result;
+                }
+            
                 return View();
         }
        
