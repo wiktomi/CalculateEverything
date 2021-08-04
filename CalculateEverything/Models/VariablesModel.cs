@@ -4,18 +4,27 @@ namespace CalculateEverything.Models
 {
     public class VariablesModel
     {
+        // Kwadrat
+
         [Display(Name = "Bok kwadratu")]
         [Required(ErrorMessage = "Pole Wymagane")]
         public double SquareSide { get; set; }
-        [Display(Name ="Przekątna kwadratu")]
+
+        [Display(Name = "Przekątna kwadratu")]
         [Required]
         public double SquareDiagonal { get; set; }
+
+        // Prostokąt
 
         [Display(Name = "Pierwszy bok prostokąta")]
         public double FristRectangleSide { get; set; }
 
         [Display(Name = "Drugi bok prostokąta")]
         public double SecondRectangleSide { get; set; }
+        [Display(Name = "Przekątna prostokąta")]
+        public double RectangleDiagonal { get; set; }
+
+        // Trójkąt
 
         [Display(Name = "Podstawa trójkąta")]
         public double TriangleBaseLine { get; set; }

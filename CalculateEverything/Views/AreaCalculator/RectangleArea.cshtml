@@ -5,22 +5,105 @@
 }
 
 
-
-<h3>Pole Prostokąta</h3>
-<form asp-controller="AreaCalculator" asp-action="RectangleArea" method="post">
-    <div class="mb-3" style="max-width: 40rem;">
-        <div>
-            <label class="col-form-label mt-4" asp-for="FristRectangleSide">Podaj pierwszy bok prostokąta:</label>
-            <input type="number" class="form-control" asp-for="FristRectangleSide" placeholder="Pierwszy bok prostokąta" id="inputSide">
-            <label class="col-form-label mt-4" asp-for="SecondRectangleSide">Podaj drugi bok prostokąta:</label>
-            <input type="number" class="form-control" asp-for="SecondRectangleSide" placeholder="Drugi bok prostokąta" id="inputSide">
-        </div>
-        <div class="d-grid gap-2" style="padding-top: 30px">
-            <button name="button" class="btn btn-lg btn-success" asp-controller="AreaCalculator" asp-action="RectangleArea" formmethod="post">Oblicz</button>
-        </div>
-        <div>
-            <label class="form-label mt-4" asp-for="Result">Pole prostokąta wynosi:</label>
-            <input class="form-control" id="readOnlyInput" type="text" value="@ViewBag.Result" placeholder="Wynik" readonly="">
-        </div>
+<div class="row">
+    <div class="col-lg-4 border border-success" >
+        <h5>Oblicz pierwszy bok prostokąta</h5>
+        <form asp-controller="AreaCalculator" asp-action="RectangleArea" method="post">
+            <div class="mb-3" style="max-width: 40rem;">
+                <div>
+                    <label class="col-form-label mt-4" asp-for="SecondRectangleSide">Podaj drugi bok prostokąta:</label>
+                    <input type="text" class="form-control" asp-for="SecondRectangleSide" placeholder="Drugi bok prostokąta" id="inputSecondRectangleSide">
+                    <label class="col-form-label mt-4" asp-for="RectangleDiagonal">Podaj przekątną prostokąta:</label>
+                    <input type="text" class="form-control" asp-for="RectangleDiagonal" placeholder="Przekątna prostokąta" id="inputSquareDiagonal">
+                </div>
+                <div class="d-grid gap-2" style="padding-top: 30px">
+                    <button name="button" value="buttonFirst" class="btn btn-lg btn-success" asp-controller="AreaCalculator" asp-action="RectangleArea" formmethod="post">Oblicz</button>
+                </div>
+                <div>
+                    <label class="form-label mt-4" asp-for="Result">Pierwszy bok prostokąta wynosi:</label>
+                    <input class="form-control" id="readOnlyInput" type="text" value="@ViewBag.ResultSecondSide" placeholder="Wynik" readonly="">
+                </div>
+            </div>
+        </form>
     </div>
-</form>
+    <div class="col-lg-4 border border-success">
+        <h5>Oblicz drugi bok prostokąta</h5>
+        <form asp-controller="AreaCalculator" asp-action="RectangleArea" method="post">
+            <div class="mb-3" style="max-width: 40rem;">
+                <div>
+                    <label class="col-form-label mt-4" asp-for="FristRectangleSide">Podaj pierwszy bok prostokąta:</label>
+                    <input type="text" class="form-control" asp-for="FristRectangleSide" placeholder="Pierwszy bok prostokąta" id="inputFirstRectangleSide">
+                    <label class="col-form-label mt-4" asp-for="RectangleDiagonal">Podaj przekątną prostokąta:</label>
+                    <input type="text" class="form-control" asp-for="RectangleDiagonal" placeholder="Przekątna prostokąta" id="inputRectangleDiagonal">
+                </div>
+                <div class="d-grid gap-2" style="padding-top: 30px">
+                    <button name="button" value="buttonSecond" class="btn btn-lg btn-success" asp-controller="AreaCalculator" asp-action="RectangleArea" formmethod="post">Oblicz</button>
+                </div>
+                <div>
+                    <label class="form-label mt-4" asp-for="Result">Drugi bok prostokąta wynosi:</label>
+                    <input class="form-control" id="readOnlyInput" type="text" value="@ViewBag.ResultFirstSide" placeholder="Wynik" readonly="">
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="col-lg-4 border border-success">
+        <h5>Oblicz przekątną prostokąta</h5>
+        <form asp-controller="AreaCalculator" asp-action="RectangleArea" method="post">
+            <div class="mb-3" style="max-width: 40rem;">
+                <div>
+                    <label class="col-form-label mt-4" asp-for="FristRectangleSide">Podaj pierwszy bok prostokąta:</label>
+                    <input type="text" class="form-control" asp-for="FristRectangleSide" placeholder="Pierwszy bok prostokąta" id="inputFirstRectangleSide">
+                    <label class="col-form-label mt-4" asp-for="SecondRectangleSide">Podaj drugi bok prostokąta:</label>
+                    <input type="text" class="form-control" asp-for="SecondRectangleSide" placeholder="Drugi bok prostokąta" id="inputSecondRectangleSide">
+                </div>
+                <div class="d-grid gap-2" style="padding-top: 30px">
+                    <button name="button" value="buttonThird" class="btn btn-lg btn-success" asp-controller="AreaCalculator" asp-action="RectangleArea" formmethod="post">Oblicz</button>
+                </div>
+                <div>
+                    <label class="form-label mt-4" asp-for="Result">Przekątna prostokąta wynosi:</label>
+                    <input class="form-control" id="readOnlyInput" type="text" value="@ViewBag.ResultDiagonal" placeholder="Wynik" readonly="">
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="col-lg-6 border border-success">
+        <h5>Oblicz pole prostokąta</h5>
+        <form asp-controller="AreaCalculator" asp-action="RectangleArea" method="post">
+            <div class="mb-3" style="max-width: 40rem;">
+                <div>
+                    <label class="col-form-label mt-4" asp-for="FristRectangleSide">Podaj pierwszy bok prostokąta:</label>
+                    <input type="text" class="form-control" asp-for="FristRectangleSide" placeholder="Pierwszy bok prostokąta" id="inputSide">
+                    <label class="col-form-label mt-4" asp-for="SecondRectangleSide">Podaj drugi bok prostokąta:</label>
+                    <input type="text" class="form-control" asp-for="SecondRectangleSide" placeholder="Drugi bok prostokąta" id="inputSide">
+                </div>
+                <div class="d-grid gap-2" style="padding-top: 30px">
+                    <button name="button" value="buttonFourth" class="btn btn-lg btn-success" asp-controller="AreaCalculator" asp-action="RectangleArea" formmethod="post">Oblicz</button>
+                </div>
+                <div>
+                    <label class="form-label mt-4" asp-for="Result">Pole prostokąta wynosi:</label>
+                    <input class="form-control" id="readOnlyInput" type="text" value="@ViewBag.ResultArea" placeholder="Wynik" readonly="">
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="col-lg-6 border border-success">
+        <h5>Oblicz obwód prostokąta</h5>
+        <form asp-controller="AreaCalculator" asp-action="RectangleArea" method="post">
+            <div class="mb-3" style="max-width: 40rem;">
+                <div>
+                    <label class="col-form-label mt-4" asp-for="FristRectangleSide">Podaj pierwszy bok prostokąta:</label>
+                    <input type="text" class="form-control" asp-for="FristRectangleSide" placeholder="Pierwszy bok prostokąta" id="inputSide">
+                    <label class="col-form-label mt-4" asp-for="SecondRectangleSide">Podaj drugi bok prostokąta:</label>
+                    <input type="text" class="form-control" asp-for="SecondRectangleSide" placeholder="Drugi bok prostokąta" id="inputSide">
+                </div>
+                <div class="d-grid gap-2" style="padding-top: 30px">
+                    <button name="button" value="buttonFifth" class="btn btn-lg btn-success" asp-controller="AreaCalculator" asp-action="RectangleArea" formmethod="post">Oblicz</button>
+                </div>
+                <div>
+                    <label class="form-label mt-4" asp-for="Result">Obwód prostokąta wynosi:</label>
+                    <input class="form-control" id="readOnlyInput" type="text" value="@ViewBag.ResultCircuit" placeholder="Wynik" readonly="">
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
