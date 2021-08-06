@@ -126,15 +126,18 @@ namespace CalculateEverything.Controllers
             }
             if (button == "buttonFifth")
             {
-
+                model.Result = Math.Round(Math.Sqrt(Math.Pow(model.Hypotenuse, 2) - Math.Pow(model.SecondCathetus, 2)), 2);
+                ViewBag.ResultFirstCatheus = model.Result.ToString();
             }
             if (button == "buttonSixth")
             {
-
+                model.Result = Math.Round(Math.Sqrt(Math.Pow(model.Hypotenuse, 2) - Math.Pow(model.FirstCathetus, 2)), 2);
+                ViewBag.ResultSecondCatheus = model.Result.ToString();
             }
             if (button == "buttonSeventh")
             {
-
+                model.Result = Math.Round(model.TriangleBaseLine + model.FirstTriangleSide + model.SecondTriangleSide , 2);
+                ViewBag.ResultCircuit = model.Result.ToString();
             }
 
 
