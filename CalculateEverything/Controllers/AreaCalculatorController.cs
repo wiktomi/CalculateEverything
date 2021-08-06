@@ -50,12 +50,12 @@ namespace CalculateEverything.Controllers
 
 
         [HttpGet]
-        public IActionResult RectangleArea()
+        public IActionResult Rectangle()
         {
             return View();
         }
         [HttpPost]
-        public IActionResult RectangleArea(VariablesModel model, string button)
+        public IActionResult Rectangle(VariablesModel model, string button)
         {
             if (!ModelState.IsValid)
             {
