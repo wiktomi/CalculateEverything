@@ -13,12 +13,12 @@ namespace CalculateEverything.Controllers
             _model = model;
         }
         [HttpGet]
-        public IActionResult SquareArea()
+        public IActionResult Square()
         {
             return View();
         }
         [HttpPost]
-        public IActionResult SquareArea(VariablesModel model, string button)
+        public IActionResult Square(VariablesModel model, string button)
         {
             if (!ModelState.IsValid)
             {
