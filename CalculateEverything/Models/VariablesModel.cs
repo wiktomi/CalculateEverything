@@ -29,8 +29,23 @@ namespace CalculateEverything.Models
         [Display(Name = "Podstawa trójkąta")]
         public double TriangleBaseLine { get; set; }
 
+        [Display(Name = "Pierwszy bok trójkąta")]
+        public double FirstTriangleSide { get; set; }
+
+        [Display(Name = "Drugi bok trójkąta")]
+        public double SecondTriandleSide { get; set; }
+
         [Display(Name = "Wysokość trójkąta")]
         public double TriangleHeight { get; set; }
+
+        [Display(Name ="Pierwsza przyprostokątna")]
+        public double FirstCathetus { get; set; }
+
+        [Display(Name ="Druga przyprostokątna")]
+        public double SecondCathetus { get; set; }
+
+        [Display(Name ="Przeciwprostokątna")]
+        public double Hypotenuse { get; set; }
 
 
         [Display(Name = "Wynik")]
