@@ -91,12 +91,12 @@ namespace CalculateEverything.Controllers
             return View();
         }
         [HttpGet]
-        public IActionResult TriangleArea()
+        public IActionResult Triangle()
         {
             return View();
         }
         [HttpPost]
-        public IActionResult TriangleArea(VariablesModel model)
+        public IActionResult Triangle(VariablesModel model)
         {
             model.Result = (model.TriangleBaseLine * model.TriangleHeight) / 2;
             ViewBag.Result = model.Result;
