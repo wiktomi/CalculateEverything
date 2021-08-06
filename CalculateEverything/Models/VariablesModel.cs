@@ -33,10 +33,13 @@ namespace CalculateEverything.Models
         public double FirstTriangleSide { get; set; }
 
         [Display(Name = "Drugi bok trójkąta")]
-        public double SecondTriandleSide { get; set; }
+        public double SecondTriangleSide { get; set; }
 
         [Display(Name = "Wysokość trójkąta")]
         public double TriangleHeight { get; set; }
+
+        [Display(Name = "Kąt alfa")]
+        public int AlphaAngle { get; set; }
 
         [Display(Name ="Pierwsza przyprostokątna")]
         public double FirstCathetus { get; set; }

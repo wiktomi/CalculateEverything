@@ -96,10 +96,49 @@ namespace CalculateEverything.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult Triangle(VariablesModel model)
+        public IActionResult Triangle(VariablesModel model, string button)
         {
-            model.Result = (model.TriangleBaseLine * model.TriangleHeight) / 2;
-            ViewBag.Result = model.Result;
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
+
+            if (button == "buttonFirst") 
+            {
+                model.Result = Math.Round((model.TriangleBaseLine * model.TriangleHeight) / 2, 2);
+                ViewBag.ResultArea = model.Result.ToString();
+            }
+            if (button == "buttonSecond")
+            {
+                model.Result = Math.Round(((model.FirstTriangleSide * model.SecondTriangleSide) * Math.Sin(model.AlphaAngle)) /2 , 2);
+                ViewBag.ResultArea2 = model.Result.ToString();
+            }
+            if (button == "buttonThird")
+            {
+                double halfCircle = (model.FirstTriangleSide + model.SecondTriangleSide + model.TriangleBaseLine) / 2;
+                model.Result = Math.Round(Math.Sqrt(halfCircle * (halfCircle - model.FirstTriangleSide) * (halfCircle - model.SecondTriangleSide) * (halfCircle - model.TriangleBaseLine)), 2);
+                ViewBag.ResultArea3 = model.Result.ToString();
+            }
+            if (button == "buttonFourth")
+            {
+                model.Result = Math.Round(Math.Sqrt(Math.Pow(model.FirstCathetus, 2) + Math.Pow(model.SecondCathetus, 2)), 2);
+                ViewBag.ResultHypnotenuse = model.Result.ToString();
+            }
+            if (button == "buttonFifth")
+            {
+
+            }
+            if (button == "buttonSixth")
+            {
+
+            }
+            if (button == "buttonSeventh")
+            {
+
+            }
+
+
+
             return View();
         }
     }
