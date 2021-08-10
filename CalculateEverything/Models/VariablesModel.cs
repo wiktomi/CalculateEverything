@@ -50,6 +50,29 @@ namespace CalculateEverything.Models
         [Display(Name ="Przeciwprostokątna")]
         public double Hypotenuse { get; set; }
 
+        // Równoległobok
+
+        [Display(Name = "Pierwszy bok równoległoboku")]
+        public double FirstSideParallerogram { get; set; }
+
+        [Display(Name = "Drugi bok równoległoboku")]
+        public double SecondSideParallerogram { get; set; }
+
+        [Display(Name = "Wysokość równoległoboku")]
+        public double HeightParallerogram { get; set; }
+
+        [Display(Name = "Pierwsza przekątna równoległoboku")]
+        public double FirstDiagonalParallerogram { get; set; }
+
+        [Display(Name = "Druga przekątna równoległoboku")]
+        public double SecondDiagonalParallerogram { get; set; }
+
+        [Display(Name = "Kąt alfa równoległoboku")]
+        public double AlphaAngleParallerogram { get; set; }
+
+        [Display(Name = "Kąt gamma równoległoboku")]
+        public double GammaAngleParallerogram { get; set; }
+
 
         [Display(Name = "Wynik")]
         public double Result { get; set; }
