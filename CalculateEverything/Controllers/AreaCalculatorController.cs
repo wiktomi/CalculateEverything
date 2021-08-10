@@ -103,14 +103,14 @@ namespace CalculateEverything.Controllers
                 return View();
             }
 
-            if (button == "buttonFirst") 
+            if (button == "buttonFirst")
             {
                 model.Result = Math.Round((model.TriangleBaseLine * model.TriangleHeight) / 2, 2);
                 ViewBag.ResultArea = model.Result.ToString();
             }
             if (button == "buttonSecond")
             {
-                model.Result = Math.Round(((model.FirstTriangleSide * model.SecondTriangleSide) * Math.Sin(model.AlphaAngle)) /2 , 2);
+                model.Result = Math.Round(((model.FirstTriangleSide * model.SecondTriangleSide) * Math.Sin(model.AlphaAngle)) / 2, 2);
                 ViewBag.ResultArea2 = model.Result.ToString();
             }
             if (button == "buttonThird")
@@ -136,13 +136,51 @@ namespace CalculateEverything.Controllers
             }
             if (button == "buttonSeventh")
             {
-                model.Result = Math.Round(model.TriangleBaseLine + model.FirstTriangleSide + model.SecondTriangleSide , 2);
+                model.Result = Math.Round(model.TriangleBaseLine + model.FirstTriangleSide + model.SecondTriangleSide, 2);
                 ViewBag.ResultCircuit = model.Result.ToString();
             }
+            return View();
 
+        }
 
+        [HttpGet]
+        public IActionResult Parallelogram()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult Parallelogram(VariablesModel model, string button)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
+
+            if (button == "buttonFirst")
+            {
+                model.Result = Math.Round((model.TriangleBaseLine * model.TriangleHeight) / 2, 2);
+                ViewBag.ResultArea = model.Result.ToString();
+            }
+            if (button == "buttonSecond")
+            {
+                model.Result = Math.Round(((model.FirstTriangleSide * model.SecondTriangleSide) * Math.Sin(model.AlphaAngle)) / 2, 2);
+                ViewBag.ResultArea2 = model.Result.ToString();
+            }
+            if (button == "buttonThird")
+            {
+                double halfCircle = (model.FirstTriangleSide + model.SecondTriangleSide + model.TriangleBaseLine) / 2;
+                model.Result = Math.Round(Math.Sqrt(halfCircle * (halfCircle - model.FirstTriangleSide) * (halfCircle - model.SecondTriangleSide) * (halfCircle - model.TriangleBaseLine)), 2);
+                ViewBag.ResultArea3 = model.Result.ToString();
+            }
+            if (button == "buttonFourth")
+            {
+                model.Result = Math.Round(Math.Sqrt(Math.Pow(model.FirstCathetus, 2) + Math.Pow(model.SecondCathetus, 2)), 2);
+                ViewBag.ResultHypnotenuse = model.Result.ToString();
+            }
 
             return View();
         }
+            
+        
     }
 }
