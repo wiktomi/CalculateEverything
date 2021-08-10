@@ -158,24 +158,23 @@ namespace CalculateEverything.Controllers
 
             if (button == "buttonFirst")
             {
-                model.Result = Math.Round((model.TriangleBaseLine * model.TriangleHeight) / 2, 2);
+                model.Result = Math.Round((model.FirstSideParallerogram * model.SecondSideParallerogram), 2);
                 ViewBag.ResultArea = model.Result.ToString();
             }
             if (button == "buttonSecond")
             {
-                model.Result = Math.Round(((model.FirstTriangleSide * model.SecondTriangleSide) * Math.Sin(model.AlphaAngle)) / 2, 2);
+                model.Result = Math.Round((model.FirstSideParallerogram + model.SecondSideParallerogram) * Math.Sin(model.AlphaAngleParallerogram), 2);
                 ViewBag.ResultArea2 = model.Result.ToString();
             }
             if (button == "buttonThird")
             {
-                double halfCircle = (model.FirstTriangleSide + model.SecondTriangleSide + model.TriangleBaseLine) / 2;
-                model.Result = Math.Round(Math.Sqrt(halfCircle * (halfCircle - model.FirstTriangleSide) * (halfCircle - model.SecondTriangleSide) * (halfCircle - model.TriangleBaseLine)), 2);
+                model.Result = Math.Round(((model.FirstDiagonalParallerogram * model.SecondDiagonalParallerogram) / 2 ) * Math.Sin(model.GammaAngleParallerogram), 2);
                 ViewBag.ResultArea3 = model.Result.ToString();
             }
             if (button == "buttonFourth")
             {
-                model.Result = Math.Round(Math.Sqrt(Math.Pow(model.FirstCathetus, 2) + Math.Pow(model.SecondCathetus, 2)), 2);
-                ViewBag.ResultHypnotenuse = model.Result.ToString();
+                model.Result = Math.Round((model.FirstSideParallerogram * 2) + (model.SecondSideParallerogram *2), 2);
+                ViewBag.ResultCircuit = model.Result.ToString();
             }
 
             return View();
