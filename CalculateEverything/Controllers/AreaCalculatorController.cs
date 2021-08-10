@@ -158,12 +158,12 @@ namespace CalculateEverything.Controllers
 
             if (button == "buttonFirst")
             {
-                model.Result = Math.Round((model.FirstSideParallerogram * model.SecondSideParallerogram), 2);
+                model.Result = Math.Round((model.FirstSideParallerogram * model.HeightParallerogram), 2);
                 ViewBag.ResultArea = model.Result.ToString();
             }
             if (button == "buttonSecond")
             {
-                model.Result = Math.Round((model.FirstSideParallerogram + model.SecondSideParallerogram) * Math.Sin(model.AlphaAngleParallerogram), 2);
+                model.Result = Math.Round(model.FirstSideParallerogram * model.SecondSideParallerogram * Math.Sin(model.AlphaAngleParallerogram * (Math.PI/180)), 2);
                 ViewBag.ResultArea2 = model.Result.ToString();
             }
             if (button == "buttonThird")

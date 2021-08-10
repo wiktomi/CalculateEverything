@@ -7,7 +7,7 @@
 <div class="row">
     
     <div class="col-xl-3 border border-success">
-        <h6>Pole równoległoboku</h6>
+        <h5 class="text-center">Pole równoległoboku</h5>
         <form asp-controller="AreaCalculator" asp-action="Parallelogram" method="post">
             <div class="mb-3" style="max-width: 40rem; margin-top: 38px;">
                 <div>
@@ -27,7 +27,7 @@
         </form>
     </div>
     <div class="col-xl-3 border border-success">
-        <h6>Pole równoległoboku(kąt alfa)</h6>
+        <h5 class="text-center">Pole równoległoboku (kąt alfa)</h5>
         <form asp-controller="AreaCalculator" asp-action="Parallelogram" method="post">
             <div class="mb-3" style="max-width: 40rem; margin-top: 5px;">
                 <div>
@@ -49,13 +49,13 @@
         </form>
     </div>
     <div class="col-xl-3 border border-success">
-        <h6>Pole równoległoboku(kąt gamma)</h6>
+        <h5>Pole równoległoboku (kąt gamma)</h5>
         <form asp-controller="AreaCalculator" asp-action="Parallelogram" method="post">
             <div class="mb-3" style="max-width: 40rem; margin-top: 5px;">
                 <div>
-                    <label class="col-form-label mt-4" asp-for="FirstDiagonalParallerogram">Podaj pierwszą przekątną równoległoboku:</label>
+                    <label class="col-form-label mt-4" asp-for="FirstDiagonalParallerogram">Podaj przekątną równoległoboku:</label>
                     <input type="text" class="form-control" asp-for="FirstDiagonalParallerogram" placeholder="Przekątna równoległoboku" id="inputFirstDiagonalParallerogram">
-                    <label class="col-form-label mt-4" asp-for="SecondDiagonalParallerogram">Podaj drugą przekątną równoległoboku:</label>
+                    <label class="col-form-label mt-4" asp-for="SecondDiagonalParallerogram">Podaj przekątną równoległoboku:</label>
                     <input type="text" class="form-control" asp-for="SecondDiagonalParallerogram" placeholder="Przekątna równoległoboku" id="inputSecondDiagonalParallerogram">
                     <label class="col-form-label mt-4" asp-for="GammaAngleParallerogram">Podaj kąt gamma równoległoboku:</label>
                     <input type="text" class="form-control" asp-for="GammaAngleParallerogram" placeholder="Kąt gamma równoległoboku" id="inputGammaAngleParallerogram">
@@ -71,7 +71,7 @@
         </form>
     </div>
     <div class="col-xl-3 border border-success">
-        <h6>Obwód równoległoboku</h6>
+        <h5>Obwód równoległoboku</h5>
         <form asp-controller="AreaCalculator" asp-action="Parallelogram" method="post">
             <div class="mb-3" style="max-width: 40rem; margin-top: 38px;">
                 <div>
