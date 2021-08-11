@@ -1,0 +1,89 @@
+﻿@model VariablesModel
+@{
+    ViewData["Title"] = "Rhombus";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+
+    <div class="col-xl-3 border border-success">
+        <h5 class="text-center">Pole rombu</h5>
+        <form asp-controller="AreaCalculator" asp-action="Rhombus" method="post">
+            <div class="mb-3" style="max-width: 40rem; margin-top: 38px;">
+                <div>
+                    <label class="col-form-label mt-4" asp-for="RhombusSide">Podaj bok rombu:</label>
+                    <input type="text" class="form-control" asp-for="RhombusSide" placeholder="Bok rombu" id="inputRhombusSide">
+                    <label class="col-form-label mt-4" asp-for="RhombusHeight">Podaj wysokość rombu:</label>
+                    <input type="text" class="form-control" asp-for="RhombusHeight" placeholder="Wysokość rombu" id="inputRhombusHeight">
+                </div>
+                <div class="d-grid gap-2" style="padding-top: 30px">
+                    <button name="button" value="buttonFirst" class="btn btn-lg btn-success" asp-controller="AreaCalculator" asp-action="Rhombus" formmethod="post">Oblicz</button>
+                </div>
+                <div>
+                    <label class="form-label mt-4" asp-for="Result">Pole rombu wynosi:</label>
+                    <input class="form-control" id="readOnlyInput" type="text" value="@ViewBag.ResultArea" placeholder="Wynik" readonly="">
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="col-xl-3 border border-success">
+        <h5 class="text-center">Pole rombu(kąt alfa)</h5>
+        <form asp-controller="AreaCalculator" asp-action="Rhombus" method="post">
+            <div class="mb-3" style="max-width: 40rem; margin-top: 38px;">
+                <div>
+                    <label class="col-form-label mt-4" asp-for="RhombusSide">Podaj bok rombu:</label>
+                    <input type="text" class="form-control" asp-for="RhombusSide" placeholder="Bok rombu" id="inputRhombusSide">
+                    <label class="col-form-label mt-4" asp-for="RhombusAlfaAngle">Podaj kąt alfa rombu:</label>
+                    <input type="text" class="form-control" asp-for="RhombusAlfaAngle" placeholder="Kąt alfa" id="inputRhombusAlfaAngle">
+                </div>
+                <div class="d-grid gap-2" style="padding-top: 30px">
+                    <button name="button" value="buttonSecond" class="btn btn-lg btn-success" asp-controller="AreaCalculator" asp-action="Rhombus" formmethod="post">Oblicz</button>
+                </div>
+                <div>
+                    <label class="form-label mt-4" asp-for="Result">Pole rombu wynosi:</label>
+                    <input class="form-control" id="readOnlyInput" type="text" value="@ViewBag.ResultArea2" placeholder="Wynik" readonly="">
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="col-xl-3 border border-success">
+        <h5 class="text-center">Pole rombu(przekątne)</h5>
+        <form asp-controller="AreaCalculator" asp-action="Rhombus" method="post">
+            <div class="mb-3" style="max-width: 40rem; margin-top: 38px;">
+                <div>
+                    <label class="col-form-label mt-4" asp-for="FirstRhombusDiagonal">Podaj pierwszą przekątną rombu:</label>
+                    <input type="text" class="form-control" asp-for="FirstRhombusDiagonal" placeholder="Pierwsza przekątna" id="inputFirstRhombusDiagonal">
+                    <label class="col-form-label mt-4" asp-for="SecondRhombusDiagonal">Podaj drugą przekątną rombu:</label>
+                    <input type="text" class="form-control" asp-for="SecondRhombusDiagonal" placeholder="Druga przekątna" id="inputSecondRhombusDiagonal">
+                </div>
+                <div class="d-grid gap-2" style="padding-top: 30px">
+                    <button name="button" value="buttonThird" class="btn btn-lg btn-success" asp-controller="AreaCalculator" asp-action="Rhombus" formmethod="post">Oblicz</button>
+                </div>
+                <div>
+                    <label class="form-label mt-4" asp-for="Result">Pole rombu wynosi:</label>
+                    <input class="form-control" id="readOnlyInput" type="text" value="@ViewBag.ResultArea3" placeholder="Wynik" readonly="">
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="col-xl-3 border border-success">
+        <h5 class="text-center">Obwód rombu</h5>
+        <form asp-controller="AreaCalculator" asp-action="Rhombus" method="post">
+            <div class="mb-3" style="max-width: 40rem; margin-top: 38px;">
+                <div>
+                    <label class="col-form-label mt-4" asp-for="RhombusSide">Podaj bok rombu:</label>
+                    <input type="text" class="form-control" asp-for="RhombusSide" placeholder="Bok rombu" id="inputRhombusSide">                  
+                </div>
+                <div class="d-grid gap-2" style="padding-top: 30px">
+                    <button name="button" value="buttonThird" class="btn btn-lg btn-success" asp-controller="AreaCalculator" asp-action="Rhombus" formmethod="post">Oblicz</button>
+                </div>
+                <div>
+                    <label class="form-label mt-4" asp-for="Result">Pole rombu wynosi:</label>
+                    <input class="form-control" id="readOnlyInput" type="text" value="@ViewBag.ResultCircuit" placeholder="Wynik" readonly="">
+                </div>
+            </div>
+        </form>
+    </div>
+
+</div>
+

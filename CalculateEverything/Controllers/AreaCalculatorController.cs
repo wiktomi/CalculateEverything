@@ -190,22 +190,22 @@ namespace CalculateEverything.Controllers
 
             if (button == "buttonFirst")
             {
-                model.Result = Math.Round((model.FirstSideParallerogram * model.HeightParallerogram), 2);
+                model.Result = Math.Round((model.RhombusSide * model.RhombusHeight), 2);
                 ViewBag.ResultArea = model.Result.ToString();
             }
             if (button == "buttonSecond")
             {
-                model.Result = Math.Round(model.FirstSideParallerogram * model.SecondSideParallerogram * Math.Sin(model.AlphaAngleParallerogram * (Math.PI / 180)), 2);
+                model.Result = Math.Round(model.RhombusSide * Math.Sin(model.RhombusAlfaAngle * (Math.PI / 180)), 2);
                 ViewBag.ResultArea2 = model.Result.ToString();
             }
             if (button == "buttonThird")
             {
-                model.Result = Math.Round(((model.FirstDiagonalParallerogram * model.SecondDiagonalParallerogram) / 2) * Math.Sin(model.GammaAngleParallerogram), 2);
+                model.Result = Math.Round((model.FirstRhombusDiagonal * model.SecondRhombusDiagonal) / 2 , 2);
                 ViewBag.ResultArea3 = model.Result.ToString();
             }
             if (button == "buttonFourth")
             {
-                model.Result = Math.Round((model.FirstSideParallerogram * 2) + (model.SecondSideParallerogram * 2), 2);
+                model.Result = Math.Round(4 * model.RhombusSide , 2);
                 ViewBag.ResultCircuit = model.Result.ToString();
             }
 
