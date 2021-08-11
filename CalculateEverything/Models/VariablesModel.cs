@@ -68,10 +68,23 @@ namespace CalculateEverything.Models
         public double SecondDiagonalParallerogram { get; set; }
 
         [Display(Name = "Kąt alfa równoległoboku")]
-        public double AlphaAngleParallerogram { get; set; }
+        public int AlphaAngleParallerogram { get; set; }
 
         [Display(Name = "Kąt gamma równoległoboku")]
-        public double GammaAngleParallerogram { get; set; }
+        public int GammaAngleParallerogram { get; set; }
+
+        //Romb
+
+        [Display(Name = "Bok rombu")]
+        public double RhombusSide { get; set; }
+        [Display(Name = "Wysokość rombu")]
+        public double RhombusHeight { get; set; }
+        [Display(Name = "Kąt alfa")]
+        public int RhombusAlfaAngle { get; set; }
+        [Display(Name = "Pierwsza przekątna rombu")]
+        public double FirstRhombusDiagonal { get; set; }
+        [Display(Name = "Druga przekątna rombu")]
+        public double SecondRhombusDiagonal { get; set; }
 
 
         [Display(Name = "Wynik")]
