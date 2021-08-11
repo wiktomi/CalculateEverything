@@ -179,8 +179,13 @@ namespace CalculateEverything.Controllers
 
             return View();
         }
-
         [HttpGet]
+        public IActionResult Rhombus()
+        {
+            return View();
+        }
+
+        [HttpPost]
         public IActionResult Rhombus(VariablesModel model, string button)
         {
             if (!ModelState.IsValid)
