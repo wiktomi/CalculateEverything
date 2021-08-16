@@ -231,13 +231,13 @@ namespace CalculateEverything.Controllers
 
             if (button == "buttonFirst")
             {
-                model.Result = Math.Round((model.RhombusSide * model.RhombusHeight), 2);
+                model.Result = Math.Round((model.TrapeziumDownBase + model.TrapeziumUpBase) / 2 * model.TrapeziumHeight, 2);
                 ViewBag.ResultArea = model.Result.ToString();
             }
             if (button == "buttonSecond")
             {
-                model.Result = Math.Round(model.RhombusSide * Math.Sin(model.RhombusAlfaAngle * (Math.PI / 180)), 2);
-                ViewBag.ResultArea2 = model.Result.ToString();
+                model.Result = Math.Round(model.TrapeziumDownBase + model.TrapeziumUpBase + model.TrapeziumFirstSide + model.TrapeziumSecondSide, 2);
+                ViewBag.ResultCircuit = model.Result.ToString();
             }
 
             return View();
