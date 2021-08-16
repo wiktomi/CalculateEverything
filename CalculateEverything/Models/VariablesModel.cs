@@ -73,7 +73,7 @@ namespace CalculateEverything.Models
         [Display(Name = "Kąt gamma równoległoboku")]
         public int GammaAngleParallerogram { get; set; }
 
-        //Romb
+        //Romb i deltoid
 
         [Display(Name = "Bok rombu")]
         public double RhombusSide { get; set; }
@@ -85,6 +85,16 @@ namespace CalculateEverything.Models
         public double FirstRhombusDiagonal { get; set; }
         [Display(Name = "Druga przekątna rombu")]
         public double SecondRhombusDiagonal { get; set; }
+        [Display(Name = "Pierwsza przekątna deltoidu")]
+        public double FirstDeltoidDiagonal { get; set; }
+        [Display(Name = "Druga przekątna rombu")]
+        public double SecondDeltoidDiagonal { get; set; }
+        [Display(Name = "Pierwszy bok deltoidu")]
+        public double FirstDeltoidSide { get; set; }
+        [Display(Name = "Drugi bok deltoidu")]
+        public double SecondDeltoidSide { get; set; }
+        [Display(Name = "Kąt alfa deltoidu")]
+        public int DeltoidAlphaAngle { get; set; }
 
         //Trapez
 
