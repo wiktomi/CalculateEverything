@@ -216,7 +216,32 @@ namespace CalculateEverything.Controllers
 
             return View();
         }
-            
+        [HttpGet]
+        public IActionResult Trapezium()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult Trapezium(VariablesModel model, string button)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
+
+            if (button == "buttonFirst")
+            {
+                model.Result = Math.Round((model.RhombusSide * model.RhombusHeight), 2);
+                ViewBag.ResultArea = model.Result.ToString();
+            }
+            if (button == "buttonSecond")
+            {
+                model.Result = Math.Round(model.RhombusSide * Math.Sin(model.RhombusAlfaAngle * (Math.PI / 180)), 2);
+                ViewBag.ResultArea2 = model.Result.ToString();
+            }
+
+            return View();
+        }
         
     }
 }

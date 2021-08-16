@@ -86,6 +86,20 @@ namespace CalculateEverything.Models
         [Display(Name = "Druga przekątna rombu")]
         public double SecondRhombusDiagonal { get; set; }
 
+        //Trapez
+
+        [Display(Name = "Dolna podstawa trapezu")]
+        public double TrapeziumDownBase { get; set; }
+        [Display(Name = "Górna podstawa trapezu")]
+        public double TrapeziumUpBase { get; set; }
+        [Display(Name = "Pierwszy bok trapezu")]
+        public double TrapeziumFirstSide { get; set; }
+        [Display(Name = "Drugi bok trapezu")]
+        public double TrapeziumSecondSide { get; set; }
+        [Display(Name = "Wysokość trapezu")]
+        public double TrapeziumHeight { get; set; }
+
+
 
         [Display(Name = "Wynik")]
         public double Result { get; set; }
