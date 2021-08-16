@@ -180,13 +180,13 @@ namespace CalculateEverything.Controllers
             return View();
         }
         [HttpGet]
-        public IActionResult Rhombus()
+        public IActionResult RhombusAndDeltoid()
         {
             return View();
         }
 
         [HttpPost]
-        public IActionResult Rhombus(VariablesModel model, string button)
+        public IActionResult RhombusAndDeltoid(VariablesModel model, string button)
         {
             if (!ModelState.IsValid)
             {
@@ -212,6 +212,21 @@ namespace CalculateEverything.Controllers
             {
                 model.Result = Math.Round(4 * model.RhombusSide , 2);
                 ViewBag.ResultCircuit = model.Result.ToString();
+            }
+            if (button == "buttonFifth")
+            {
+                model.Result = Math.Round(model.FirstDeltoidDiagonal * model.SecondDeltoidDiagonal / 2, 2);
+                ViewBag.ResultAreaDeltoid = model.Result.ToString();
+            }
+            if (button == "buttonSixth")
+            {
+                model.Result = Math.Round(model.FirstDeltoidSide * model.SecondDeltoidSide * Math.Sin(model.DeltoidAlphaAngle * (Math.PI / 180)), 2);
+                ViewBag.ResultAreaDeltoid2 = model.Result.ToString();
+            }
+            if (button == "buttonSeventh")
+            {
+                model.Result = Math.Round(2 * model.FirstDeltoidSide + 2 * model.SecondDeltoidSide, 2);
+                ViewBag.ResultDeltoidCircuit = model.Result.ToString();
             }
 
             return View();
