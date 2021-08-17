@@ -109,6 +109,11 @@ namespace CalculateEverything.Models
         [Display(Name = "Wysokość trapezu")]
         public double TrapeziumHeight { get; set; }
 
+        // Koło
+
+        [Display(Name = "Promień koła")]
+        public double CircleRadius { get; set; }
+
 
 
         [Display(Name = "Wynik")]

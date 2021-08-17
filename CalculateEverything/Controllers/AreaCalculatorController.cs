@@ -257,6 +257,32 @@ namespace CalculateEverything.Controllers
 
             return View();
         }
+        [HttpGet]
+        public IActionResult Circle()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult Circle(VariablesModel model, string button)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
+
+            if (button == "buttonFirst")
+            {
+                model.Result = Math.Round(Math.PI * Math.Pow(model.CircleRadius, 2), 2);
+                ViewBag.ResultArea = model.Result.ToString();
+            }
+            if (button == "buttonSecond")
+            {
+                model.Result = Math.Round(2* Math.PI * model.CircleRadius, 2);
+                ViewBag.ResultCircuit = model.Result.ToString();
+            }
+
+            return View();
+        }
         
     }
 }

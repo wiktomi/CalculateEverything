@@ -1,0 +1,45 @@
+﻿@model VariablesModel
+@{
+    ViewData["Title"] = "Circle";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="row">
+    <div class="col-xl-6 border border-success">
+        <h5 class="text-center">Pole koła</h5>
+        <form asp-controller="AreaCalculator" asp-action="Circle" method="post">
+            <div class="mb-3" style="max-width: 40rem; margin-top: 38px;">
+                <div>
+                    <label class="col-form-label mt-4" asp-for="CircleRadius">Podaj promień koła:</label>
+                    <input type="text" class="form-control" asp-for="CircleRadius" placeholder="Promień koła" id="inputCircleRadius">
+                </div>
+                <div class="d-grid gap-2" style="padding-top: 30px">
+                    <button name="button" value="buttonFirst" class="btn btn-lg btn-success" asp-controller="AreaCalculator" asp-action="Circle" formmethod="post">Oblicz</button>
+                </div>
+                <div>
+                    <label class="form-label mt-4" asp-for="Result">Pole koła wynosi:</label>
+                    <input class="form-control" id="readOnlyInput" type="text" value="@ViewBag.ResultArea" placeholder="Wynik" readonly="">
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="col-xl-6 border border-success">
+        <h5 class="text-center">Obwód koła</h5>
+        <form asp-controller="AreaCalculator" asp-action="Circle" method="post">
+            <div class="mb-3" style="max-width: 40rem; margin-top: 38px;">
+                <div>
+                    <label class="col-form-label mt-4" asp-for="CircleRadius">Podaj promień koła:</label>
+                    <input type="text" class="form-control" asp-for="CircleRadius" placeholder="Promień koła" id="inputCircleRadius">
+                </div>
+                <div class="d-grid gap-2" style="padding-top: 30px">
+                    <button name="button" value="buttonSecond" class="btn btn-lg btn-success" asp-controller="AreaCalculator" asp-action="Circle" formmethod="post">Oblicz</button>
+                </div>
+                <div>
+                    <label class="form-label mt-4" asp-for="Result">Obwód koła wynosi:</label>
+                    <input class="form-control" id="readOnlyInput" type="text" value="@ViewBag.ResultCircuit" placeholder="Wynik" readonly="">
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
