@@ -4,11 +4,11 @@ using System;
 
 namespace CalculateEverything.Controllers
 {
-    public class AreaCircuitCalculatorController : Controller
+    public class FlatGeometryController : Controller
     {
         private readonly FlatGeometryModel _model;
 
-        public AreaCircuitCalculatorController(FlatGeometryModel model)
+        public FlatGeometryController(FlatGeometryModel model)
         {
             _model = model;
         }
