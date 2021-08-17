@@ -1,0 +1,27 @@
+﻿@model SpatialGeometryModel
+@{
+    ViewData["Title"] = "Cube";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-lg-3 border border-success">
+        <h5>Pole trójkąta</h5>
+        <form asp-controller="SpatialGeometry" asp-action="Cube" method="post">
+            <div class="mb-3" style="max-width: 40rem; margin-top: 38px;">
+                <div>
+                    <label class="col-form-label mt-4" asp-for="CubeSide">Podaj podstawę trójkąta:</label>
+                    <input type="text" class="form-control" asp-for="CubeSide" placeholder="Podstawa trójkąta" id="inputCubeSide">
+                </div>
+                <div class="d-grid gap-2" style="padding-top: 30px">
+                    <button name="button" value="buttonFirst" class="btn btn-lg btn-success" asp-controller="SpatialGeometry" asp-action="Cube" formmethod="post">Oblicz</button>
+                </div>
+                <div>
+                    <label class="form-label mt-4" asp-for="Result">Pole trójkąta wynosi:</label>
+                    <input class="form-control" id="readOnlyInput" type="text" value="@ViewBag.Result" placeholder="Wynik" readonly="">
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+

@@ -1,4 +1,5 @@
 using CalculateEverything.Models;
+using CalculateEverything.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -19,8 +20,11 @@ namespace CalculateEverything
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllersWithViews();
+            services.AddHttpClient();
+            services.AddControllersWithViews();              
             services.AddMvc();
+            services.AddHttpContextAccessor();
+            services.AddScoped<ISpatialGeometryService, SpatialGeometryService>();
             
             services.AddRazorPages()
                 .AddMvcOptions(options =>
