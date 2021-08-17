@@ -28,7 +28,7 @@ namespace CalculateEverything
                     options.MaxModelValidationErrors = 50;
                     options.ModelBindingMessageProvider.SetValueMustNotBeNullAccessor(_ => "To pole jest wymagane");
                 });
-            services.AddScoped<VariablesModel>();
+            services.AddScoped<FlatGeometryModel>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

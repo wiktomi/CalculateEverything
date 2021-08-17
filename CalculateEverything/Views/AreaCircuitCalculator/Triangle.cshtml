@@ -1,4 +1,4 @@
-﻿@model VariablesModel
+﻿@model FlatGeometryModel
 @{
     ViewData["Title"] = "Triangle";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -7,7 +7,7 @@
 <div class="row">
     <div class="col-lg-3 border border-success">
             <h5>Pole trójkąta</h5>
-        <form asp-controller="AreaCalculator" asp-action="Triangle" method="post">
+        <form asp-controller="AreaCircuitCalculator" asp-action="Triangle" method="post">
             <div class="mb-3" style="max-width: 40rem; margin-top: 38px;">
                 <div>
                     <label class="col-form-label mt-4" asp-for="TriangleBaseLine">Podaj podstawę trójkąta:</label>
@@ -16,7 +16,7 @@
                     <input type="text" class="form-control" asp-for="TriangleHeight" placeholder="Wysokość trójkąta" id="inputTriangleHeight">
                 </div>
                 <div class="d-grid gap-2" style="padding-top: 30px">
-                    <button name="button" value="buttonFirst" class="btn btn-lg btn-success" asp-controller="AreaCalculator" asp-action="Triangle" formmethod="post">Oblicz</button>
+                    <button name="button" value="buttonFirst" class="btn btn-lg btn-success" asp-controller="AreaCircuitCalculator" asp-action="Triangle" formmethod="post">Oblicz</button>
                 </div>
                 <div>
                     <label class="form-label mt-4" asp-for="Result">Pole trójkąta wynosi:</label>
@@ -27,7 +27,7 @@
     </div>
     <div class="col-lg-3 border border-success">
         <h5>Pole trójkąta (sinus kąta alfa)</h5>
-        <form asp-controller="AreaCalculator" asp-action="Triangle" method="post">
+        <form asp-controller="AreaCircuitCalculator" asp-action="Triangle" method="post">
             <div class="mb-3" style="max-width: 40rem;">
                 <div>
                     <label class="col-form-label mt-4" asp-for="FirstTriangleSide">Podaj pierwszy bok przy kącie alfa:</label>
@@ -38,7 +38,7 @@
                     <input type="text" class="form-control" asp-for="AlphaAngle" placeholder="Kąt alfa" id="inputAlphaAngle">
                 </div>
                 <div class="d-grid gap-2" style="padding-top: 30px">
-                    <button name="button" value="buttonSecond" class="btn btn-lg btn-success" asp-controller="AreaCalculator" asp-action="Triangle" formmethod="post">Oblicz</button>
+                    <button name="button" value="buttonSecond" class="btn btn-lg btn-success" asp-controller="AreaCircuitCalculator" asp-action="Triangle" formmethod="post">Oblicz</button>
                 </div>
                 <div>
                     <label class="form-label mt-4" asp-for="Result">Pole trójkąta wynosi:</label>
@@ -49,7 +49,7 @@
     </div>
     <div class="col-lg-3 border border-success">
         <h5>Pole trójkąta (długości boków)</h5>
-        <form asp-controller="AreaCalculator" asp-action="Triangle" method="post">
+        <form asp-controller="AreaCircuitCalculator" asp-action="Triangle" method="post">
             <div class="mb-3" style="max-width: 40rem;">
                 <div>
                     <label class="col-form-label mt-4" asp-for="FirstTriangleSide">Podaj pierwszy bok trójkąta:</label>
@@ -60,7 +60,7 @@
                     <input type="text" class="form-control" asp-for="TriangleBaseLine" placeholder="Trzeci bok" id="inputTriangleBaseLine">
                 </div>
                 <div class="d-grid gap-2" style="padding-top: 30px">
-                    <button name="button" value="buttonThird" class="btn btn-lg btn-success" asp-controller="AreaCalculator" asp-action="Triangle" formmethod="post">Oblicz</button>
+                    <button name="button" value="buttonThird" class="btn btn-lg btn-success" asp-controller="AreaCircuitCalculator" asp-action="Triangle" formmethod="post">Oblicz</button>
                 </div>
                 <div>
                     <label class="form-label mt-4" asp-for="Result">Pole trójkąta wynosi:</label>
@@ -71,7 +71,7 @@
     </div>
     <div class="col-lg-3 border border-success">
         <h5>Obwód trójkąta:</h5>
-        <form asp-controller="AreaCalculator" asp-action="Triangle" method="post">
+        <form asp-controller="AreaCircuitCalculator" asp-action="Triangle" method="post">
             <div class="mb-3" style="max-width: 40rem; margin-top: 38px;">
                 <div>
                     <label class="col-form-label mt-4" asp-for="FirstTriangleSide">Podaj pierwszy bok trójkąta:</label>
@@ -82,7 +82,7 @@
                     <input type="text" class="form-control" asp-for="TriangleBaseLine" placeholder="Trzeci bok" id="inputTriangleBaseLine">
                 </div>
                 <div class="d-grid gap-2" style="padding-top: 30px">
-                    <button name="button" value="buttonSeventh" class="btn btn-lg btn-success" asp-controller="AreaCalculator" asp-action="Triangle" formmethod="post">Oblicz</button>
+                    <button name="button" value="buttonSeventh" class="btn btn-lg btn-success" asp-controller="AreaCircuitCalculator" asp-action="Triangle" formmethod="post">Oblicz</button>
                 </div>
                 <div>
                     <label class="form-label mt-4" asp-for="Result">Pole trójkąta wynosi:</label>
@@ -93,7 +93,7 @@
     </div>
     <div class="col-lg-4 border border-success">
         <h5>Oblicz przeciwprostokątną</h5>
-        <form asp-controller="AreaCalculator" asp-action="Triangle" method="post">
+        <form asp-controller="AreaCircuitCalculator" asp-action="Triangle" method="post">
             <div class="mb-3" style="max-width: 40rem;">
                 <div>
                     <label class="col-form-label mt-4" asp-for="FirstCathetus">Podaj pierwszą przyprostokątną trójkąta:</label>
@@ -102,7 +102,7 @@
                     <input type="text" class="form-control" asp-for="SecondCathetus" placeholder="Przyprostokątna trójkąta" id="inputSecondCatheus">
                 </div>
                 <div class="d-grid gap-2" style="padding-top: 30px">
-                    <button name="button" value="buttonFourth" class="btn btn-lg btn-success" asp-controller="AreaCalculator" asp-action="Triangle" formmethod="post">Oblicz</button>
+                    <button name="button" value="buttonFourth" class="btn btn-lg btn-success" asp-controller="AreaCircuitCalculator" asp-action="Triangle" formmethod="post">Oblicz</button>
                 </div>
                 <div>
                     <label class="form-label mt-4" asp-for="Result">Pole trójkąta wynosi:</label>
@@ -113,7 +113,7 @@
     </div>
     <div class="col-lg-4 border border-success">
         <h5>Oblicz pierwszą przyprostokątną</h5>
-        <form asp-controller="AreaCalculator" asp-action="Triangle" method="post">
+        <form asp-controller="AreaCircuitCalculator" asp-action="Triangle" method="post">
             <div class="mb-3" style="max-width: 40rem;">
                 <div>
                     <label class="col-form-label mt-4" asp-for="SecondCathetus">Podaj drugą przyprostokątną trójkąta:</label>
@@ -122,7 +122,7 @@
                     <input type="text" class="form-control" asp-for="Hypotenuse" placeholder="przeciwprostokątna trójkąta" id="inputHypnotenuse">
                 </div>
                 <div class="d-grid gap-2" style="padding-top: 30px">
-                    <button name="button" value="buttonFifth" class="btn btn-lg btn-success" asp-controller="AreaCalculator" asp-action="Triangle" formmethod="post">Oblicz</button>
+                    <button name="button" value="buttonFifth" class="btn btn-lg btn-success" asp-controller="AreaCircuitCalculator" asp-action="Triangle" formmethod="post">Oblicz</button>
                 </div>
                 <div>
                     <label class="form-label mt-4" asp-for="Result">Pole trójkąta wynosi:</label>
@@ -133,7 +133,7 @@
     </div>
     <div class="col-lg-4 border border-success">
         <h5>Oblicz drugą przyprostokątną</h5>
-        <form asp-controller="AreaCalculator" asp-action="Triangle" method="post">
+        <form asp-controller="AreaCircuitCalculator" asp-action="Triangle" method="post">
             <div class="mb-3" style="max-width: 40rem;">
                 <div>
                     <label class="col-form-label mt-4" asp-for="FirstCathetus">Podaj pierwszą przyprostokątną trójkąta:</label>
@@ -143,7 +143,7 @@
 
                 </div>
                 <div class="d-grid gap-2" style="padding-top: 30px">
-                    <button name="button" value="buttonSixth" class="btn btn-lg btn-success" asp-controller="AreaCalculator" asp-action="Triangle" formmethod="post">Oblicz</button>
+                    <button name="button" value="buttonSixth" class="btn btn-lg btn-success" asp-controller="AreaCircuitCalculator" asp-action="Triangle" formmethod="post">Oblicz</button>
                 </div>
                 <div>
                     <label class="form-label mt-4" asp-for="Result">Pole trójkąta wynosi:</label>

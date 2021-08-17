@@ -4,11 +4,11 @@ using System;
 
 namespace CalculateEverything.Controllers
 {
-    public class AreaCalculatorController : Controller
+    public class AreaCircuitCalculatorController : Controller
     {
-        private readonly VariablesModel _model;
+        private readonly FlatGeometryModel _model;
 
-        public AreaCalculatorController(VariablesModel model)
+        public AreaCircuitCalculatorController(FlatGeometryModel model)
         {
             _model = model;
         }
@@ -18,7 +18,7 @@ namespace CalculateEverything.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult Square(VariablesModel model, string button)
+        public IActionResult Square(FlatGeometryModel model, string button)
         {
             if (!ModelState.IsValid)
             {
@@ -55,7 +55,7 @@ namespace CalculateEverything.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult Rectangle(VariablesModel model, string button)
+        public IActionResult Rectangle(FlatGeometryModel model, string button)
         {
             if (!ModelState.IsValid)
             {
@@ -96,7 +96,7 @@ namespace CalculateEverything.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult Triangle(VariablesModel model, string button)
+        public IActionResult Triangle(FlatGeometryModel model, string button)
         {
             if (!ModelState.IsValid)
             {
@@ -149,7 +149,7 @@ namespace CalculateEverything.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult Parallelogram(VariablesModel model, string button)
+        public IActionResult Parallelogram(FlatGeometryModel model, string button)
         {
             if (!ModelState.IsValid)
             {
@@ -186,7 +186,7 @@ namespace CalculateEverything.Controllers
         }
 
         [HttpPost]
-        public IActionResult RhombusAndDeltoid(VariablesModel model, string button)
+        public IActionResult RhombusAndDeltoid(FlatGeometryModel model, string button)
         {
             if (!ModelState.IsValid)
             {
@@ -237,7 +237,7 @@ namespace CalculateEverything.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult Trapezium(VariablesModel model, string button)
+        public IActionResult Trapezium(FlatGeometryModel model, string button)
         {
             if (!ModelState.IsValid)
             {
@@ -263,7 +263,7 @@ namespace CalculateEverything.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult Circle(VariablesModel model, string button)
+        public IActionResult Circle(FlatGeometryModel model, string button)
         {
             if (!ModelState.IsValid)
             {

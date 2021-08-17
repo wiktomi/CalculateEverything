@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace CalculateEverything.Models
 {
-    public class VariablesModel
+    public class FlatGeometryModel
     {
         
         // Kwadrat

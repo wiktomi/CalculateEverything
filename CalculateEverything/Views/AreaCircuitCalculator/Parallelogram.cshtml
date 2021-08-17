@@ -1,4 +1,4 @@
-﻿@model VariablesModel
+﻿@model FlatGeometryModel
 @{
     ViewData["Title"] = "Parallelogram";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -8,7 +8,7 @@
     
     <div class="col-xl-3 border border-success">
         <h5 class="text-center">Pole równoległoboku</h5>
-        <form asp-controller="AreaCalculator" asp-action="Parallelogram" method="post">
+        <form asp-controller="AreaCircuitCalculator" asp-action="Parallelogram" method="post">
             <div class="mb-3" style="max-width: 40rem; margin-top: 38px;">
                 <div>
                     <label class="col-form-label mt-4" asp-for="FirstSideParallerogram">Podaj podstawę równoległoboku:</label>
@@ -17,7 +17,7 @@
                     <input type="text" class="form-control" asp-for="HeightParallerogram" placeholder="Wysokość równoległoboku" id="inputParallelogramHeight">
                 </div>
                 <div class="d-grid gap-2" style="padding-top: 30px">
-                    <button name="button" value="buttonFirst" class="btn btn-lg btn-success" asp-controller="AreaCalculator" asp-action="Parallelogram" formmethod="post">Oblicz</button>
+                    <button name="button" value="buttonFirst" class="btn btn-lg btn-success" asp-controller="AreaCircuitCalculator" asp-action="Parallelogram" formmethod="post">Oblicz</button>
                 </div>
                 <div>
                     <label class="form-label mt-4" asp-for="Result">Pole równoległoboku wynosi:</label>
@@ -28,7 +28,7 @@
     </div>
     <div class="col-xl-3 border border-success">
         <h5 class="text-center">Pole równoległoboku (kąt alfa)</h5>
-        <form asp-controller="AreaCalculator" asp-action="Parallelogram" method="post">
+        <form asp-controller="AreaCircuitCalculator" asp-action="Parallelogram" method="post">
             <div class="mb-3" style="max-width: 40rem; margin-top: 5px;">
                 <div>
                     <label class="col-form-label mt-4" asp-for="FirstSideParallerogram">Podaj podstawę równoległoboku:</label>
@@ -39,7 +39,7 @@
                     <input type="text" class="form-control" asp-for="AlphaAngleParallerogram" placeholder="Kąt alfa równoległoboku" id="inputAlphaAngleParallerogram">
                 </div>
                 <div class="d-grid gap-2" style="padding-top: 30px">
-                    <button name="button" value="buttonSecond" class="btn btn-lg btn-success" asp-controller="AreaCalculator" asp-action="Parallelogram" formmethod="post">Oblicz</button>
+                    <button name="button" value="buttonSecond" class="btn btn-lg btn-success" asp-controller="AreaCircuitCalculator" asp-action="Parallelogram" formmethod="post">Oblicz</button>
                 </div>
                 <div>
                     <label class="form-label mt-4" asp-for="Result">Pole równoległoboku wynosi:</label>
@@ -50,7 +50,7 @@
     </div>
     <div class="col-xl-3 border border-success">
         <h5>Pole równoległoboku (kąt gamma)</h5>
-        <form asp-controller="AreaCalculator" asp-action="Parallelogram" method="post">
+        <form asp-controller="AreaCircuitCalculator" asp-action="Parallelogram" method="post">
             <div class="mb-3" style="max-width: 40rem; margin-top: 5px;">
                 <div>
                     <label class="col-form-label mt-4" asp-for="FirstDiagonalParallerogram">Podaj przekątną równoległoboku:</label>
@@ -61,7 +61,7 @@
                     <input type="text" class="form-control" asp-for="GammaAngleParallerogram" placeholder="Kąt gamma równoległoboku" id="inputGammaAngleParallerogram">
                 </div>
                 <div class="d-grid gap-2" style="padding-top: 30px">
-                    <button name="button" value="buttonThird" class="btn btn-lg btn-success" asp-controller="AreaCalculator" asp-action="Parallelogram" formmethod="post">Oblicz</button>
+                    <button name="button" value="buttonThird" class="btn btn-lg btn-success" asp-controller="AreaCircuitCalculator" asp-action="Parallelogram" formmethod="post">Oblicz</button>
                 </div>
                 <div>
                     <label class="form-label mt-4" asp-for="Result">Pole równoległoboku wynosi:</label>
@@ -72,7 +72,7 @@
     </div>
     <div class="col-xl-3 border border-success">
         <h5>Obwód równoległoboku</h5>
-        <form asp-controller="AreaCalculator" asp-action="Parallelogram" method="post">
+        <form asp-controller="AreaCircuitCalculator" asp-action="Parallelogram" method="post">
             <div class="mb-3" style="max-width: 40rem; margin-top: 38px;">
                 <div>
                     <label class="col-form-label mt-4" asp-for="FirstSideParallerogram">Podaj podstawę równoległoboku:</label>
@@ -81,7 +81,7 @@
                     <input type="text" class="form-control" asp-for="SecondSideParallerogram" placeholder="Bok równoległoboku" id="inputSecondSideParallerogram">
                 </div>
                 <div class="d-grid gap-2" style="padding-top: 30px">
-                    <button name="button" value="buttonFourth" class="btn btn-lg btn-success" asp-controller="AreaCalculator" asp-action="Parallelogram" formmethod="post">Oblicz</button>
+                    <button name="button" value="buttonFourth" class="btn btn-lg btn-success" asp-controller="AreaCircuitCalculator" asp-action="Parallelogram" formmethod="post">Oblicz</button>
                 </div>
                 <div>
                     <label class="form-label mt-4" asp-for="Result">Pole równoległoboku wynosi:</label>
