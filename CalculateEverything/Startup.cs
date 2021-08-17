@@ -21,6 +21,7 @@ namespace CalculateEverything
         {
             services.AddControllersWithViews();
             services.AddMvc();
+            
             services.AddRazorPages()
                 .AddMvcOptions(options =>
                 {

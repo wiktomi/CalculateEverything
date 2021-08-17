@@ -1,9 +1,11 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace CalculateEverything.Models
 {
     public class VariablesModel
     {
+        
         // Kwadrat
 
         [Display(Name = "Bok kwadratu")]
